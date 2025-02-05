@@ -1,11 +1,6 @@
 package com.example.models;
 
-import java.util.Arrays;
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNotNull;
-
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -15,13 +10,14 @@ public class GhostTest {
 
     @BeforeEach
     void setUp(){
-        ghost = new Ghost();
+        ghost = new Ghost("La llorona");
     }
 
     @Test
     void testGetName(){
         assertEquals("La llorona", ghost.getName());
     }
+}
 
 
 
