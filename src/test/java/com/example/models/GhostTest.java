@@ -27,11 +27,8 @@ public class GhostTest {
 
     @Test
     void testGetGhostClass(){
-        assertEquals("Clase I", ghost.GetGhostClass());
+        assertEquals("Clase I" , ghost.getGhostClass());
     }
-
-
-
 }
 
 
