@@ -1,5 +1,6 @@
 package com.example.models;
 
-public class Ghost {
 
-}
+    public class Ghost{
+    }
+

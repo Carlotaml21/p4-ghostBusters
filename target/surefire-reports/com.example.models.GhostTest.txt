@@ -1,0 +1,13 @@
+-------------------------------------------------------------------------------
+Test set: com.example.models.GhostTest
+-------------------------------------------------------------------------------
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.056 s <<< FAILURE! - in com.example.models.GhostTest
+com.example.models.GhostTest.testGetName  Time elapsed: 0.029 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problems: 
+	The constructor Ghost(String, String, String, String, String) is undefined
+	The method getName() is undefined for the type Ghost
+	Syntax error, insert "}" to complete ClassBody
+
+	at com.example.models.GhostTest.<init>(GhostTest.java:22)
+
