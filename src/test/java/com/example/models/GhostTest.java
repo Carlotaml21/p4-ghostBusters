@@ -29,6 +29,16 @@ public class GhostTest {
     void testGetGhostClass(){
         assertEquals("Clase I" , ghost.getGhostClass());
     }
+
+    @Test 
+    void testSetGhostClass(){
+        assertEquals("Clase I", ghost.getGhostClass()); 
+        ghost.setGhostClass("Clase IV");
+        assertEquals("Clase IV", ghost.getGhostClass());
+    }
+
+
+
 }
 
 
