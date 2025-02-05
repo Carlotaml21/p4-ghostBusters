@@ -1,4 +1,11 @@
 -------------------------------------------------------------------------------
 Test set: com.example.models.GhostTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 0.085 s - in com.example.models.GhostTest
+Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 0.089 s <<< FAILURE! - in com.example.models.GhostTest
+com.example.models.GhostTest.testSetName  Time elapsed: 0.049 s  <<< ERROR!
+java.lang.Error: 
+Unresolved compilation problem: 
+	The method setName(String) is undefined for the type Ghost
+
+	at com.example.models.GhostTest.testSetName(GhostTest.java:24)
+

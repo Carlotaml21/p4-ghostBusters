@@ -17,6 +17,13 @@ public class GhostTest {
     void testGetName(){
         assertEquals("La llorona", ghost.getName());
     }
+
+    @Test 
+    void testSetName(){
+        assertEquals("La llorona", ghost.getName()); 
+        ghost.setName("Fantasma del Nalon");
+        assertEquals("Fantasma del Nalon", ghost.getName());
+    }
 }
 
 
