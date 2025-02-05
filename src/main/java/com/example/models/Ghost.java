@@ -6,10 +6,10 @@ package com.example.models;
         private String ghostClass;
 
 
-        public Ghost (String name, String classGhost){
+        public Ghost (String name, String ghostClass){
             this.name = name;
-            this.ghostClass = classGhost;
-   ;     }
+            this.ghostClass = ghostClass;
+          }
 
         public String getName(){
             return name;
@@ -22,6 +22,10 @@ package com.example.models;
         public String getGhostClass(){
 
             return ghostClass;
+        }
+
+        public void setGhostClass (String ghostClass){
+            this.ghostClass = ghostClass;
         }
     
     }

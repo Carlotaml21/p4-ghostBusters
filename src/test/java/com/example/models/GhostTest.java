@@ -33,7 +33,7 @@ public class GhostTest {
     @Test 
     void testSetGhostClass(){
         assertEquals("Clase I", ghost.getGhostClass()); 
-        ghost.setGhostClass("Clase IV");
+        ghost.setGhostClass("Clase IV" );
         assertEquals("Clase IV", ghost.getGhostClass());
     }
 
