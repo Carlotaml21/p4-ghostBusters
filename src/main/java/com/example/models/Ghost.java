@@ -4,11 +4,13 @@ package com.example.models;
     public class Ghost{
         private String name;
         private String ghostClass;
+        private String danger;
 
 
-        public Ghost (String name, String ghostClass){
+        public Ghost (String name, String ghostClass, String danger){
             this.name = name;
             this.ghostClass = ghostClass;
+            this.danger = danger;
           }
 
         public String getName(){
@@ -27,6 +29,11 @@ package com.example.models;
         public void setGhostClass (String ghostClass){
             this.ghostClass = ghostClass;
         }
+
+        public String getDanger() {
+            return danger;
+        }
+    
     
     }
 
