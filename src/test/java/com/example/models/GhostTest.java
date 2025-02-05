@@ -10,7 +10,7 @@ public class GhostTest {
 
     @BeforeEach
     void setUp(){
-        ghost = new Ghost("La llorona");
+        ghost = new Ghost("La llorona", "Clase I");
     }
 
     @Test
@@ -24,6 +24,14 @@ public class GhostTest {
         ghost.setName("Fantasma del Nalon");
         assertEquals("Fantasma del Nalon", ghost.getName());
     }
+
+    @Test
+    void testGetGhostClass(){
+        assertEquals("Clase I", ghost.GetGhostClass());
+    }
+
+
+
 }
 
 

@@ -5,7 +5,7 @@ package com.example.models;
         private String name;
 
 
-        public Ghost (String name){
+        public Ghost (String name, String classGhost){
             this.name = name;
         }
 
