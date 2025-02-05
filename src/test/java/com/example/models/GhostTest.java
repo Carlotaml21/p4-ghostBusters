@@ -42,6 +42,13 @@ public class GhostTest {
         assertEquals("Bajo", ghost.getDanger());
     }
 
+    @Test 
+    void testSetDanger(){
+        assertEquals("Bajo", ghost.setDanger()); 
+        ghost.setDanger("Critico" );
+        assertEquals("Bajo", ghost.setDanger());
+    }
+
 
 
 
