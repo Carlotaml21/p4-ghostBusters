@@ -33,6 +33,10 @@ package com.example.models;
         public String getDanger() {
             return danger;
         }
+
+        public void setDanger (String danger){
+            this.danger = danger;
+        }
     
     
     }
