@@ -10,7 +10,7 @@ public class GhostTest {
 
     @BeforeEach
     void setUp(){
-        ghost = new Ghost("La llorona", "Clase I", "Bajo");
+        ghost = new Ghost("La llorona", "Clase I", "Bajo", "Persecucion");
     }
 
     @Test
@@ -49,7 +49,10 @@ public class GhostTest {
         assertEquals("Critico", ghost.getDanger());
     }
 
-
+    @Test
+    void testGetAbilities(){
+        assertEquals("Persecucion", ghost.getAbilities());
+    }
 
 
 }
