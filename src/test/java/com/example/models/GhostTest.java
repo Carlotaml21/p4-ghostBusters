@@ -54,6 +54,13 @@ public class GhostTest {
         assertEquals("Persecucion", ghost.getAbilities());
     }
 
+    @Test 
+    void testSetAbilities(){
+        assertEquals("Persecucion", ghost.getAbilities()); 
+        ghost.setAbilities("Poltergueist" );
+        assertEquals("Poltergueist", ghost.getAbilities());
+    }
+
 
 }
 
