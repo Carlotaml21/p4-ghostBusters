@@ -2,6 +2,7 @@ package com.example.models;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class GhostHunter {
 
@@ -17,5 +18,9 @@ public class GhostHunter {
 
     public void freeAGhost(String name){
         ghostContainer.removeIf(ghost -> name.equals(ghost.getName()));
+    }
+
+    public List<Ghost> filterGhostByClass(String ghostClass){
+        return ghostContainer.stream().filter(ghost -> ghostClass.equals(ghost.getGhostClass())).collect(Collectors.toList());
     }
 }
