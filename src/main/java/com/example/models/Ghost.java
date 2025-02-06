@@ -43,6 +43,11 @@ package com.example.models;
         public String getAbilities() {
             return abilities;
         }
+
+        public void setAbilities(String abilities) {
+            this.abilities = abilities;
+        }
+    
     
     
     }
