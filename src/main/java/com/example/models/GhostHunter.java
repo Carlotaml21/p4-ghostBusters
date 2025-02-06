@@ -14,4 +14,8 @@ public class GhostHunter {
     public List<Ghost> getGhostContainer(){
         return ghostContainer;
     }
+
+    public void freeAGhost(String name){
+        ghostContainer.removeIf(ghost -> name.equals(ghost.getName()));
+    }
 }
