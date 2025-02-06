@@ -39,6 +39,10 @@ package com.example.models;
         public void setDanger (String danger){
             this.danger = danger;
         }
+
+        public String getAbilities() {
+            return abilities;
+        }
     
     
     }
