@@ -62,4 +62,24 @@ public class GhostHunterTest {
 
     }
 
+    @Test
+    @DisplayName("It should filter ghost by date")
+    void testFilterByDate(){
+
+        GhostHunter hunter = new GhostHunter();
+
+        Ghost ghost1 = new Ghost("Alejandro", "Clase I", "Alto", "nulas", "06-02-2005");
+        Ghost ghost2 = new Ghost("Alex", "Clase II", "Bajo", "nulas", "06-02-2005");
+        Ghost ghost3 = new Ghost("JC", "Clase I", "Alto", "nulas", "07-02-2005");
+        Ghost ghost4 = new Ghost("Jaun", "Clase I", "Bajo", "nulas", "07-02-2005");
+
+        hunter.captureGhost(ghost1);
+        hunter.captureGhost(ghost2);
+        hunter.captureGhost(ghost3);
+        hunter.captureGhost(ghost4);
+
+        assertThat(hunter.filterGhostByMonth("07-02-2005"), not(hasItems(ghost1, ghost2)));
+
+    }
+
 }
