@@ -4,6 +4,7 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import org.junit.jupiter.api.Test;
 
+import com.example.controllers.GhostController;
 import com.example.models.Ghost;
 
 public class GhostControllerTest {
@@ -17,8 +18,9 @@ public class GhostControllerTest {
         String abilities  = "Amistad";
         String captureDate = "05-02-2025";
 
+        GhostController ghostController = new GhostController();
         
-        Ghost actualGhost = GhostController.createGhost(name, ghostClass, danger, abilities, captureDate);
+        Ghost actualGhost = ghostController.createGhost(name, ghostClass, danger, abilities, captureDate);
 
         assertNotNull(actualGhost);
        
