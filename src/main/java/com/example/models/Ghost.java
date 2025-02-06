@@ -6,13 +6,16 @@ package com.example.models;
         private String ghostClass;
         private String danger;
         private String abilities;
+        private String captureDate;
 
 
-        public Ghost (String name, String ghostClass, String danger, String abilities){
+
+        public Ghost (String name, String ghostClass, String danger, String abilities, String captureDate){
             this.name = name;
             this.ghostClass = ghostClass;
             this.danger = danger;
             this.abilities = abilities;
+            this.captureDate = captureDate;
           }
 
         public String getName(){
