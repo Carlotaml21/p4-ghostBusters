@@ -50,6 +50,11 @@ package com.example.models;
         public void setAbilities(String abilities) {
             this.abilities = abilities;
         }
+
+        public String getCaptureDate() {
+            return captureDate;
+        }
+    
     
     
     

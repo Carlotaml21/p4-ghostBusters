@@ -66,6 +66,14 @@ public class GhostTest {
         assertEquals("06-02-2025", ghost.getCaptureDate());
     }
 
+    @Test 
+    void testSetCaptureDate(){
+        assertEquals("06-02-2025", ghost.getCaptureDate()); 
+        ghost.setAbilities("02-02-2025" );
+        assertEquals("02-02-2025", ghost.getCaptureDate());
+    }
+
+
 
 }
 
