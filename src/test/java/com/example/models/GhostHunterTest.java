@@ -4,6 +4,7 @@ import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
 
@@ -16,7 +17,7 @@ public class GhostHunterTest {
 
         GhostHunter hunter = new GhostHunter();
 
-        Ghost ghost = new Ghost("Alejandro", "Clase I", "Alto", "nulas", "06-02-205");
+        Ghost ghost = new Ghost("Alejandro", "Clase I", "Alto", "nulas", "06-02-2005");
 
         assertThat(hunter.getGhostContainer().size(), is(0));
 
@@ -31,8 +32,8 @@ public class GhostHunterTest {
 
         GhostHunter hunter = new GhostHunter();
 
-        Ghost ghost1 = new Ghost("Alejandro", "Clase I", "Alto", "nulas", "06-02-205");
-        Ghost ghost2 = new Ghost("Alex", "Clase II", "Bajo", "nulas", "06-02-205");
+        Ghost ghost1 = new Ghost("Alejandro", "Clase I", "Alto", "nulas", "06-02-2005");
+        Ghost ghost2 = new Ghost("Alex", "Clase II", "Bajo", "nulas", "06-02-2005");
         
         hunter.captureGhost(ghost1);
         hunter.captureGhost(ghost2);
@@ -40,6 +41,25 @@ public class GhostHunterTest {
 
         assertThat(hunter.getGhostContainer(), not(hasItem(ghost2)));
         
+    }
+    @Test
+    @DisplayName("It should filter ghosts by class")
+    void testClassFilter(){
+
+        GhostHunter hunter = new GhostHunter();
+
+        Ghost ghost1 = new Ghost("Alejandro", "Clase I", "Alto", "nulas", "06-02-2005");
+        Ghost ghost2 = new Ghost("Alex", "Clase II", "Bajo", "nulas", "06-02-2005");
+        Ghost ghost3 = new Ghost("JC", "Clase I", "Alto", "nulas", "06-02-2005");
+        Ghost ghost4 = new Ghost("Jaun", "Clase I", "Bajo", "nulas", "06-02-2005");
+
+        hunter.captureGhost(ghost1);
+        hunter.captureGhost(ghost2);
+        hunter.captureGhost(ghost3);
+        hunter.captureGhost(ghost4);
+
+        assertThat(hunter.filterGhostByClass("Clase I"), not(hasItems(ghost2)));
+
     }
 
 }
