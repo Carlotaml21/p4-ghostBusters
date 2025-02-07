@@ -88,10 +88,10 @@ public class GhostHunterControllerTest {
 
         hunterController.captureGhosts("Alejandro", "Clase I", "Alto", "nulas", "06-02-2005");
         hunterController.captureGhosts("Alex", "Clase II", "Bajo", "nulas", "06-02-2005");
-        hunterController.captureGhosts("JC", "Clase I", "Alto", "nulas", "06-02-2005");
-        hunterController.captureGhosts("Jaun", "Clase I", "Bajo", "nulas", "06-02-2005");
+        hunterController.captureGhosts("JC", "Clase I", "Alto", "nulas", "07-02-2005");
+        hunterController.captureGhosts("Jaun", "Clase I", "Bajo", "nulas", "07-02-2005");
 
-        assertThat(hunterController.filteredGhostsByDate("Clase I"), not(hasItems(hasProperty("ghostClass", is("Clase II")))));
+        assertThat(hunterController.filteredGhostsByDate("07-02-2005"), not(hasItems(hasProperty("captureDate", is("06-02-2005")))));
     }
     
 }
