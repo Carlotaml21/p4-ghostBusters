@@ -30,4 +30,8 @@ public class GhostHunterController {
     public List<Ghost> filteredGhostsByClass (String ghostClass) {
         return hunter.filterGhostByClass(ghostClass);
     }
+
+    public List<Ghost> filteredGhostsByDate (String captureDate) {
+        return hunter.filterGhostByMonth(captureDate);
+    }
 }
