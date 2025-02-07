@@ -18,4 +18,8 @@ public class GhostHunterController {
         hunter.captureGhost(name, ghostClass, danger, abilities, captureDate);
         return hunter.getGhostContainer();
     }
+
+    public List<Ghost> getGhosts () {
+        return hunter.getGhostContainer();
+    }
 }
