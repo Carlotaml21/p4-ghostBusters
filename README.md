@@ -108,9 +108,13 @@ mvn test
 
 ## 📎 Enlaces a Documentos del Proyecto
 - **Historias de Usuario y Criterios de Aceptación** → [Figma](https://www.figma.com/design/BAaNqURPQTwBuHN8jbn0o7/Ghostbusters?node-id=0-1&p=f&t=7PRdIAvtmc2GvleF-0)
+
+![Captura de pantalla 2025-02-07 143421](https://github.com/user-attachments/assets/f3a05842-cd0a-4cb3-8a15-f1a10fde6cea)
+
 - **Diagrama UML** → [Lucidchart](https://lucid.app/lucidchart/a97f227f-44a0-4fc9-bba9-a82adaf8f7c7/edit?existing=1&docId=a97f227f-44a0-4fc9-bba9-a82adaf8f7c7&shared=true&invitationId=inv_c0aa69aa-fcde-44af-86e0-c56d49aafb2f&page=0_0#)
 
-![UML DIAGRAM] (/documentacion/GhostUML.png)
+
+![GhostUML (1)](https://github.com/user-attachments/assets/a5409160-857f-467e-85ca-a394969c417e)
 
 
 - **Gestión de Tareas** → [Jira](https://carlotaml21.atlassian.net/jira/core/projects/PG/board)
