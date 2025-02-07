@@ -9,6 +9,7 @@ import com.example.models.Ghost;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.hasProperty;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
@@ -80,6 +81,17 @@ public class GhostHunterControllerTest {
 
         assertThat(hunterController.filteredGhostsByClass("Clase II"), not(hasItem(hasProperty("ghostClass", is("Clase I")))));
         assertThat(hunterController.filteredGhostsByClass("Clase I"), not(hasItem(hasProperty("ghostClass", is("Clase II")))));
+    }
+    @Test
+    @DisplayName("It should filter ghosts by date")
+    void testFilteredByDate(){
+
+        hunterController.captureGhosts("Alejandro", "Clase I", "Alto", "nulas", "06-02-2005");
+        hunterController.captureGhosts("Alex", "Clase II", "Bajo", "nulas", "06-02-2005");
+        hunterController.captureGhosts("JC", "Clase I", "Alto", "nulas", "06-02-2005");
+        hunterController.captureGhosts("Jaun", "Clase I", "Bajo", "nulas", "06-02-2005");
+
+        assertThat(hunterController.filteredGhostsByDate("Clase I"), not(hasItems(hasProperty("ghostClass", is("Clase II")))));
     }
     
 }
