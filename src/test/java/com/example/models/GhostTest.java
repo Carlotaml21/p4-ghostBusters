@@ -73,6 +73,15 @@ public class GhostTest {
         assertEquals("02-02-2025", ghost.getCaptureDate());
     }
 
+    @Test
+    void testGhostIdAutoIncrement() {
+    Ghost ghost1 = new Ghost("La niña del pozo", "Clase IV", "Medio", "Asustar", "07-02-2025");
+    Ghost ghost2 = new Ghost("Casper", "Clase III", "Bajo", "Invisibilidad", "08-02-2025");
+
+    assertEquals(ghost1.getId() + 1, ghost2.getId());
+}
+
+
 
 
 }

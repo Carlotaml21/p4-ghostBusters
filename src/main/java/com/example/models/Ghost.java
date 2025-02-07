@@ -58,6 +58,7 @@ package com.example.models;
         public void setCaptureDate(String captureDate) {
             this.captureDate = captureDate;
         }
+
     
     }
 
