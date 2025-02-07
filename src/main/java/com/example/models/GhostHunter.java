@@ -8,16 +8,17 @@ public class GhostHunter {
 
     private List<Ghost> ghostContainer = new ArrayList<>();
 
-    public void captureGhost(Ghost ghost){
-        ghostContainer.add(ghost);
+    public void captureGhost(String name, String ghostClass, String danger, String abilities, String captureDate){
+        ghostContainer.add(new Ghost(name, ghostClass, danger, abilities, captureDate));
     }
 
     public List<Ghost> getGhostContainer(){
         return ghostContainer;
     }
 
-    public void freeAGhost(String name){
+    public String freeAGhost(String name){
         ghostContainer.removeIf(ghost -> name.equals(ghost.getName()));
+        return name;
     }
 
     public List<Ghost> filterGhostByClass(String ghostClass){
