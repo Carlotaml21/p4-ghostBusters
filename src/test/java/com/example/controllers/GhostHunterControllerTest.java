@@ -1,5 +1,6 @@
 package com.example.controllers;
 
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -14,12 +15,17 @@ import java.util.List;
 
 public class GhostHunterControllerTest {
 
+    private Ghost ghost;
+
+    @BeforeEach
+    void beforeEach(){
+        ghost = new Ghost("Alejandro", "Clase I", "Bajo", "Nulas", "07-02-2025");
+    }
+
     @Test
     @DisplayName("It should return the trapped ghost")
-    void testReturnsTrappedGhost(){
+    void testCapturesGhost(){
         GhostHunterController hunterController = new GhostHunterController();
-
-        Ghost ghost = new Ghost("Alejandro", "Clase I", "Bajo", "Nulas", "07-02-2025");
 
         List<Ghost> capturedGhosts = hunterController.
         captureGhosts(ghost.getName(), ghost.getGhostClass(), ghost.getDanger(), ghost.getAbilities(), ghost.getCaptureDate());
@@ -36,7 +42,7 @@ public class GhostHunterControllerTest {
     @DisplayName("It should return a list with the trapped ghosts")
     void testReturnsCapturedGhosts(){
         GhostHunterController hunterController = new GhostHunterController();
-        Ghost ghost = new Ghost("Alejandro", "Clase I", "Bajo", "Nulas", "07-02-2025");
+        
         hunterController.captureGhosts(ghost.getName(), ghost.getGhostClass(), ghost.getDanger(), ghost.getAbilities(), ghost.getCaptureDate());
 
         assertThat(hunterController.getGhosts(), hasItem(hasProperty("name", equalTo(ghost.getName()))));
