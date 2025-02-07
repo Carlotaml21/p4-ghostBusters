@@ -22,9 +22,12 @@ public class GhostHunterController {
     public List<Ghost> getGhosts () {
         return hunter.getGhostContainer();
     }
-
-    
+ 
     public String removeGhost(String name){
         return hunter.freeAGhost(name);
+    }
+    
+    public List<Ghost> filteredGhostsByClass (String ghostClass) {
+        return hunter.filterGhostByClass(ghostClass);
     }
 }
