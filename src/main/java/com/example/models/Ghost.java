@@ -2,6 +2,8 @@ package com.example.models;
 
 
     public class Ghost{
+        private static int counter = 1;
+        private final int id;
         private String name;
         private String ghostClass;
         private String danger;
@@ -11,6 +13,7 @@ package com.example.models;
 
 
         public Ghost (String name, String ghostClass, String danger, String abilities, String captureDate){
+            this.id = counter++;
             this.name = name;
             this.ghostClass = ghostClass;
             this.danger = danger;
@@ -58,6 +61,11 @@ package com.example.models;
         public void setCaptureDate(String captureDate) {
             this.captureDate = captureDate;
         }
+
+        public int getId() {
+            return id;
+        }
+    
 
     
     }
