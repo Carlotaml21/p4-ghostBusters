@@ -32,4 +32,20 @@ public class GhostHunterControllerTest {
 
 
     }
+    @Test
+    @DisplayName("It should return a list with the trapped ghosts")
+    void testReturnsCapturedGhosts(){
+        GhostHunterController hunterController = new GhostHunterController();
+        Ghost ghost = new Ghost("Alejandro", "Clase I", "Bajo", "Nulas", "07-02-2025");
+        hunterController.captureGhosts(ghost.getName(), ghost.getGhostClass(), ghost.getDanger(), ghost.getAbilities(), ghost.getCaptureDate());
+
+        assertThat(hunterController.getGhosts(), hasItem(hasProperty("name", equalTo(ghost.getName()))));
+        assertThat(hunterController.getGhosts(), hasItem(hasProperty("ghostClass", equalTo(ghost.getGhostClass()))));
+        assertThat(hunterController.getGhosts(), hasItem(hasProperty("danger", equalTo(ghost.getDanger()))));
+        assertThat(hunterController.getGhosts(), hasItem(hasProperty("abilities", equalTo(ghost.getAbilities()))));
+        assertThat(hunterController.getGhosts(), hasItem(hasProperty("captureDate", equalTo(ghost.getCaptureDate()))));
+    }
+
+
+    
 }
