@@ -1,4 +1,35 @@
 package com.example.controllers;
 
+import org.junit.jupiter.api.DisplayName;
+import org.junit.jupiter.api.Test;
+
+import com.example.models.Ghost;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.equalTo;
+import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.hasProperty;
+
+import java.util.List;
+
 public class GhostHunterControllerTest {
+
+    @Test
+    @DisplayName("It should return the trapped ghost")
+    void testReturnsTrappedGhost(){
+        GhostHunterController hunterController = new GhostHunterController();
+
+        Ghost ghost = new Ghost("Alejandro", "Clase I", "Bajo", "Nulas", "07-02-2025");
+
+        List<Ghost> capturedGhosts = hunterController.
+        captureGhosts(ghost.getName(), ghost.getGhostClass(), ghost.getDanger(), ghost.getAbilities(), ghost.getCaptureDate());
+        
+        assertThat(capturedGhosts, hasItem(hasProperty("name", equalTo(ghost.getName()))));
+        assertThat(capturedGhosts, hasItem(hasProperty("ghostClass", equalTo(ghost.getGhostClass()))));
+        assertThat(capturedGhosts, hasItem(hasProperty("danger", equalTo(ghost.getDanger()))));
+        assertThat(capturedGhosts, hasItem(hasProperty("abilities", equalTo(ghost.getAbilities()))));
+        assertThat(capturedGhosts, hasItem(hasProperty("captureDate", equalTo(ghost.getCaptureDate()))));
+
+
+    }
 }
