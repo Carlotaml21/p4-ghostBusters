@@ -9,7 +9,6 @@ import com.example.models.Ghost;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
-import static org.hamcrest.Matchers.hasItems;
 import static org.hamcrest.Matchers.hasProperty;
 import static org.hamcrest.Matchers.is;
 import static org.hamcrest.Matchers.not;
@@ -19,16 +18,17 @@ import java.util.List;
 public class GhostHunterControllerTest {
 
     private Ghost ghost;
+    private GhostHunterController hunterController;
 
     @BeforeEach
     void beforeEach(){
         ghost = new Ghost("Alejandro", "Clase I", "Bajo", "Nulas", "07-02-2025");
+        hunterController = new GhostHunterController();
     }
 
     @Test
     @DisplayName("It should return the trapped ghost")
     void testCapturesGhost(){
-        GhostHunterController hunterController = new GhostHunterController();
 
         List<Ghost> capturedGhosts = hunterController.
         captureGhosts(ghost.getName(), ghost.getGhostClass(), ghost.getDanger(), ghost.getAbilities(), ghost.getCaptureDate());
@@ -44,7 +44,6 @@ public class GhostHunterControllerTest {
     @Test
     @DisplayName("It should return a list with the trapped ghosts")
     void testReturnsCapturedGhosts(){
-        GhostHunterController hunterController = new GhostHunterController();
         
         hunterController.captureGhosts(ghost.getName(), ghost.getGhostClass(), ghost.getDanger(), ghost.getAbilities(), ghost.getCaptureDate());
 
@@ -57,7 +56,6 @@ public class GhostHunterControllerTest {
     @Test
     @DisplayName("It should remove the selected ghost from the list")
     void testRemovesTrappedGhost(){
-        GhostHunterController hunterController = new GhostHunterController();
 
         Ghost ghost2 = new Ghost("Alex", "Clase II", "Alto", "Nulas", "07-02-2025");
 
@@ -72,7 +70,6 @@ public class GhostHunterControllerTest {
     @Test
     @DisplayName("It should filter ghosts by class")
     void testFilteredByClass(){
-        GhostHunterController hunterController = new GhostHunterController();
 
         Ghost ghost2 = new Ghost("Alex", "Clase II", "Alto", "Nulas", "07-02-2025");
         Ghost ghost3 = new Ghost("Lucas", "Clase II", "Alto", "Nulas", "07-02-2025");
