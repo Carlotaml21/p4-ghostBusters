@@ -6,7 +6,11 @@ import java.util.stream.Collectors;
 
 public class GhostHunter {
 
-    private List<Ghost> ghostContainer = new ArrayList<>();
+    private List<Ghost> ghostContainer;
+
+    public GhostHunter () {
+        this.ghostContainer = new ArrayList<>();
+    }
 
     public void captureGhost(String name, String ghostClass, String danger, String abilities, String captureDate){
         ghostContainer.add(new Ghost(name, ghostClass, danger, abilities, captureDate));
