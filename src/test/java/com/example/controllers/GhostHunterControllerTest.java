@@ -10,6 +10,7 @@ import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.hasItem;
 import static org.hamcrest.Matchers.hasProperty;
+import static org.hamcrest.Matchers.not;
 
 import java.util.List;
 
@@ -51,7 +52,20 @@ public class GhostHunterControllerTest {
         assertThat(hunterController.getGhosts(), hasItem(hasProperty("abilities", equalTo(ghost.getAbilities()))));
         assertThat(hunterController.getGhosts(), hasItem(hasProperty("captureDate", equalTo(ghost.getCaptureDate()))));
     }
+    @Test
+    @DisplayName("It should remove the selected ghost from the list")
+    void testRemovesTrappedGhost(){
+        GhostHunterController hunterController = new GhostHunterController();
 
+        Ghost ghost2 = new Ghost("Alex", "Clase II", "Alto", "Nulas", "07-02-2025");
 
+        hunterController.captureGhosts(ghost.getName(), ghost.getGhostClass(), ghost.getDanger(), ghost.getAbilities(), ghost.getCaptureDate());
+        hunterController.captureGhosts(ghost2.getName(), ghost2.getGhostClass(), ghost2.getDanger(), ghost2.getAbilities(), ghost2.getCaptureDate());
+
+        hunterController.removeGhost(ghost.getName());
+
+        assertThat(hunterController.getGhosts(), not(hasItem(hasProperty("name", equalTo(ghost.getName())))));
+
+    }
     
 }
