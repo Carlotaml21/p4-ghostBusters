@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
+<<<<<<< HEAD
 <testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.models.GhostTest" time="0.1" tests="1" errors="0" skipped="0" failures="0">
+=======
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="com.example.models.GhostTest" time="0.128" tests="10" errors="0" skipped="0" failures="0">
+>>>>>>> dev
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -15,9 +19,15 @@
     <property name="user.country" value="ES"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
+<<<<<<< HEAD
     <property name="sun.java.command" value="C:\Users\Zepe\AppData\Local\Temp\surefire14751273843853994287\surefirebooter3691224664608892832.jar C:\Users\Zepe\AppData\Local\Temp\surefire14751273843853994287 2025-02-07T11-34-05_181-jvmRun1 surefire5342882696810158910tmp surefire_014183805331671121782tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="test" value="com.example.models.GhostTest#testGhostIdAutoIncrement"/>
+=======
+    <property name="sun.java.command" value="C:\Users\Zepe\AppData\Local\Temp\surefire1633750368471544338\surefirebooter3519911933365333659.jar C:\Users\Zepe\AppData\Local\Temp\surefire1633750368471544338 2025-02-06T12-21-27_250-jvmRun1 surefire17635471831448834333tmp surefire_015149013808988132408tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="test" value="com.example.models.GhostTest"/>
+>>>>>>> dev
     <property name="surefire.test.class.path" value="C:\Users\Zepe\OneDrive\TECHCAMPF5\Proyectos\p4-ghostBusters\p4ghostbuster\target\test-classes;C:\Users\Zepe\OneDrive\TECHCAMPF5\Proyectos\p4-ghostBusters\p4ghostbuster\target\classes;C:\Users\Zepe\.m2\repository\org\hamcrest\hamcrest\3.0\hamcrest-3.0.jar;C:\Users\Zepe\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.6.0\junit-jupiter-engine-5.6.0.jar;C:\Users\Zepe\.m2\repository\org\apiguardian\apiguardian-api\1.1.0\apiguardian-api-1.1.0.jar;C:\Users\Zepe\.m2\repository\org\junit\platform\junit-platform-engine\1.6.0\junit-platform-engine-1.6.0.jar;C:\Users\Zepe\.m2\repository\org\opentest4j\opentest4j\1.2.0\opentest4j-1.2.0.jar;C:\Users\Zepe\.m2\repository\org\junit\platform\junit-platform-commons\1.6.0\junit-platform-commons-1.6.0.jar;C:\Users\Zepe\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.6.0\junit-jupiter-api-5.6.0.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
     <property name="user.home" value="C:\Users\Zepe"/>
@@ -31,7 +41,11 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
+<<<<<<< HEAD
     <property name="surefire.real.class.path" value="C:\Users\Zepe\AppData\Local\Temp\surefire14751273843853994287\surefirebooter3691224664608892832.jar"/>
+=======
+    <property name="surefire.real.class.path" value="C:\Users\Zepe\AppData\Local\Temp\surefire1633750368471544338\surefirebooter3519911933365333659.jar"/>
+>>>>>>> dev
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.5+9-LTS-239"/>
@@ -60,7 +74,11 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
+<<<<<<< HEAD
   <testcase name="testGhostIdAutoIncrement" classname="com.example.models.GhostTest" time="0.074">
+=======
+  <testcase name="testGetCaptureDate" classname="com.example.models.GhostTest" time="0.083">
+>>>>>>> dev
     <system-err><![CDATA[java.lang.instrument.IllegalClassFormatException: Error while instrumenting com/example/models/GhostTest.
 	at org.jacoco.agent.rt.internal_035b120.CoverageTransformer.transform(CoverageTransformer.java:93)
 	at java.instrument/java.lang.instrument.ClassFileTransformer.transform(ClassFileTransformer.java:244)
@@ -165,4 +183,13 @@ Caused by: java.lang.IllegalArgumentException: Unsupported class file major vers
 	... 53 more
 ]]></system-err>
   </testcase>
+  <testcase name="testGetAbilities" classname="com.example.models.GhostTest" time="0"/>
+  <testcase name="testSetGhostClass" classname="com.example.models.GhostTest" time="0.001"/>
+  <testcase name="testGetName" classname="com.example.models.GhostTest" time="0.001"/>
+  <testcase name="testSetAbilities" classname="com.example.models.GhostTest" time="0.001"/>
+  <testcase name="testSetCaptureDate" classname="com.example.models.GhostTest" time="0.001"/>
+  <testcase name="testSetDanger" classname="com.example.models.GhostTest" time="0.001"/>
+  <testcase name="testGetDanger" classname="com.example.models.GhostTest" time="0.001"/>
+  <testcase name="testSetName" classname="com.example.models.GhostTest" time="0"/>
+  <testcase name="testGetGhostClass" classname="com.example.models.GhostTest" time="0.001"/>
 </testsuite>

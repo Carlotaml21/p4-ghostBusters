@@ -68,5 +68,12 @@ package com.example.models;
     
 
     
+
+        @Override
+        public String toString() {
+            return "Ghost{name='" + name + "', ghostClass='" + ghostClass + "', danger='" + danger +
+                   "', abilities='" + abilities + "', captureDate='" + captureDate + "'}";
+        }
+    
     }
 
