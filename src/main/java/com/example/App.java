@@ -1,8 +1,5 @@
 package com.example;
 
-import com.example.models.Ghost;
-import com.example.models.GhostHunter;
-
 /**
  * Hello world!
  */
