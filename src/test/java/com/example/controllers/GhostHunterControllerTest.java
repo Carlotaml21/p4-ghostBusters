@@ -91,7 +91,7 @@ public class GhostHunterControllerTest {
         hunterController.captureGhosts("JC", "Clase I", "Alto", "nulas", LocalDate.of(2025, 2, 7));
         hunterController.captureGhosts("Jaun", "Clase I", "Bajo", "nulas", LocalDate.of(2025, 2, 7));
 
-        assertThat(hunterController.filterGhostByMonth(2), not(hasItems(hasProperty("captureDate", is(LocalDate.of(2025, 3, 6))))));
+        assertThat(hunterController.filterGhostByMonth(2), not(hasItems(hasProperty("captureDate", hasProperty("monthValue", is(3))))));
     }
     
 }

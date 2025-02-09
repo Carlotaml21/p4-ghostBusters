@@ -61,12 +61,12 @@ public class GhostHunterTest {
 
         GhostHunter hunter = new GhostHunter();
 
-        hunter.captureGhost("Alejandro", "Clase I", "Alto", "nulas", LocalDate.of(2005, 2, 6));
-        hunter.captureGhost("Alex", "Clase II", "Bajo", "nulas",LocalDate.of(2005, 2, 6));
+        hunter.captureGhost("Alejandro", "Clase I", "Alto", "nulas", LocalDate.of(2005, 3, 6));
+        hunter.captureGhost("Alex", "Clase II", "Bajo", "nulas",LocalDate.of(2005, 3, 6));
         hunter.captureGhost("JC", "Clase I", "Alto", "nulas", LocalDate.of(2005, 2, 7));
         hunter.captureGhost("Jaun", "Clase I", "Bajo", "nulas", LocalDate.of(2005, 2, 7));
 
-        assertThat(hunter.filterGhostByMonth(2), not(hasItems(hasProperty("captureDate", is(LocalDate.of(2005, 3, 6))))));
+        assertThat(hunter.filterGhostByMonth(2), not(hasItems(hasProperty("captureDate", hasProperty("monthValue", is(3))))));
 
     }
 
