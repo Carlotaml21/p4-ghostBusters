@@ -1,5 +1,7 @@
 package com.example.models;
 
+import java.time.LocalDate;
+
 
     public class Ghost{
         private static int counter = 1;
@@ -8,11 +10,11 @@ package com.example.models;
         private String ghostClass;
         private String danger;
         private String abilities;
-        private String captureDate;
+        private LocalDate captureDate;
 
 
 
-        public Ghost (String name, String ghostClass, String danger, String abilities, String captureDate){
+        public Ghost (String name, String ghostClass, String danger, String abilities, LocalDate captureDate){
             this.id = counter++;
             this.name = name;
             this.ghostClass = ghostClass;
@@ -54,20 +56,17 @@ package com.example.models;
             this.abilities = abilities;
         }
 
-        public String getCaptureDate() {
+        public LocalDate getCaptureDate() {
             return captureDate;
         }
 
-        public void setCaptureDate(String captureDate) {
+        public void setCaptureDate(LocalDate captureDate) {
             this.captureDate = captureDate;
         }
 
         public int getId() {
             return id;
         }
-    
-
-    
 
         @Override
         public String toString() {

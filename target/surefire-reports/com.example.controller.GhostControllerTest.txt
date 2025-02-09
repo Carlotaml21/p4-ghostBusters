@@ -1,8 +1,0 @@
--------------------------------------------------------------------------------
-Test set: com.example.controller.GhostControllerTest
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 0.136 s <<< FAILURE! - in com.example.controller.GhostControllerTest
-com.example.controller.GhostControllerTest.testCreateNewGhost  Time elapsed: 0.094 s  <<< FAILURE!
-org.opentest4j.AssertionFailedError: expected: com.example.models.Ghost@6736fa8d<Ghost{name='Casper', ghostClass='Clase I', danger='Bajo', abilities='Amistad', captureDate='05-02-2025'}> but was: com.example.models.Ghost@52815fa3<Ghost{name='Casper', ghostClass='Clase I', danger='Bajo', abilities='Amistad', captureDate='05-02-2025'}>
-	at com.example.controller.GhostControllerTest.testCreateNewGhost(GhostControllerTest.java:26)
-
