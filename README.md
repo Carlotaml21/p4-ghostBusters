@@ -114,7 +114,8 @@ mvn test
 - **Diagrama UML** → [Lucidchart](https://lucid.app/lucidchart/a97f227f-44a0-4fc9-bba9-a82adaf8f7c7/edit?existing=1&docId=a97f227f-44a0-4fc9-bba9-a82adaf8f7c7&shared=true&invitationId=inv_c0aa69aa-fcde-44af-86e0-c56d49aafb2f&page=0_0#)
 
 
-![GhostUML (1)](https://github.com/user-attachments/assets/a5409160-857f-467e-85ca-a394969c417e)
+
+![GhostUML](https://github.com/user-attachments/assets/a185cd46-4d25-4288-b313-e460c59e69ce)
 
 
 - **Gestión de Tareas** → [Jira](https://carlotaml21.atlassian.net/jira/core/projects/PG/board)
